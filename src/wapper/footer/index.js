@@ -20,10 +20,10 @@ function footer () {
                         <li>Sunday: 9:00am - 7:00pm</li>
                     </ul>
                     <p className="linkPolosaFooter">
-                        <a><img src={require("../../img/youtube.svg")} alt=""/></a>
-                        <a><img src={require("../../img/instagram-icon.svg")} alt=""/></a>
-                        <a><img src={require("../../img/twitter.svg")} alt=""/></a>
-                        <a><img src={require("../../img/facebook.svg")} alt=""/></a>
+                        <a href="ya.ru"><img src={require("../../img/youtube.svg")} alt=""/></a>
+                        <a href="ya.ru"><img src={require("../../img/instagram-icon.svg")} alt=""/></a>
+                        <a href="ya.ru"><img src={require("../../img/twitter.svg")} alt=""/></a>
+                        <a href="ya.ru"><img src={require("../../img/facebook.svg")} alt=""/></a>
                     </p>
                 </div>
             </div>

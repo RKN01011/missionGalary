@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import HCMiniDiv, {HCMiniDivPlus}  from "./HCMiniDiv";
+import {HCMiniDivPlus}  from "./HCMiniDiv";
 
 class homeContent3 extends Component {
     constructor(){

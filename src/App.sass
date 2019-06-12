@@ -8,7 +8,14 @@
   li 
     cursor: pointer
 
+@keyframes coolAni
+  0% 
+    opacity: .2
+  100% 
+    opacity: 1 
 
+.About, .index 
+  animation: coolAni 2s ease 
 
 @mixin flexC 
   display: flex
@@ -19,7 +26,7 @@ $corecoolor: #01011d
 $corehover: #ff0066
 
 #root 
-  
+  background-color: #01011d
     
 @media (max-width: 868px) 
   .ourTeamImg 
@@ -84,6 +91,7 @@ $corehover: #ff0066
 nav
   background-color: $corecoolor
   height: 60px
+  width: 100%
   @include flexC()
   position: fixed
   z-index: 100

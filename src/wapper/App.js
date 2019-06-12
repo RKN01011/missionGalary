@@ -16,13 +16,13 @@ class App extends Component {
   }
   render() {
     return (
-    <React.Fragment>
+    <div className="index">
       <Nav />
       <HomeContent1 />
       <HomeContent2 />
       <HomeContent3 />
       <Footer />
-    </React.Fragment>
+    </div>
     );
   }
 }

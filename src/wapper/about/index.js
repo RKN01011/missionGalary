@@ -4,7 +4,7 @@ import Footer from "../footer";
 
 function About() {
     return(
-<React.Fragment>
+<div className="About">
     <Nav />
     <header>
         <div className="staticSlide">
@@ -35,7 +35,7 @@ function About() {
         <div className="ourTeamImg" />
     </div>
     <Footer />
-</React.Fragment>
+</div>
     )
 }
 
