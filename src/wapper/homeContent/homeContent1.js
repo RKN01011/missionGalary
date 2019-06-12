@@ -69,7 +69,7 @@ class Nav extends Component {
     render(){
     return(
 <div className="homeContent1">
-<h4 className="titleh4">On The <span className="s1">B</span>
+<h4 className="titleh4">On The <span className="s1">S</span>
     <span className="s2">t</span>
     <span className="s3">a</span>
     <span className="s4">g</span>
