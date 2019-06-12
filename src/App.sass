@@ -1,0 +1,395 @@
+* 
+  transition: .2s ease-in
+  margin: 0
+  padding: 0
+  list-style-type: none
+  color: #fff
+  text-decoration: none
+  li 
+    cursor: pointer
+
+
+
+@mixin flexC 
+  display: flex
+  justify-content: center
+  align-items: center
+
+$corecoolor: #01011d
+$corehover: #ff0066
+
+#root 
+  
+    
+@media (max-width: 868px) 
+  .ourTeamImg 
+    width: 95% !important
+    height: 55vh !important
+  .ourTeamText 
+    width: 95% !important
+  .staticSlide  
+    width: 95% !important 
+  .footerDivLeft, .footerDivRight
+    justify-content: center 
+    align-items: center !important
+    div 
+      width: 95% !important
+    h4 
+      font-size: 2vh 
+    p, li 
+      font-size: 7pt 
+    .linkPolosaFooter 
+      width: 100%
+
+  .HCMiniDiv 
+    width: 98vw !important
+  .SectionHCMiniDiv
+    width: 98% !important
+  nav 
+    height: 10vh !important 
+  .slid 
+    padding: 2vh !important
+    h5, h4
+      font-size: 2vh !important
+    p,
+      margin: 1vh 0 !important
+      margin-right: 0% !important
+    span 
+      padding: 3px !important
+      font-size: 3vw
+  .titleh4 
+    font-size: 24pt !important
+  .ico 
+    display: block !important
+  .navMenu 
+    flex-direction: column
+    position: absolute
+    right: 0px
+    bottom: -70vh
+    height: 70vh
+    overflow: hidden
+    background-color: $corecoolor
+    li 
+      margin: 1px 0
+  .invise 
+    width: 0px
+  .vise 
+    width: 30vw
+
+
+
+#root > nav, div, header
+  width: 100%
+
+nav
+  background-color: $corecoolor
+  height: 60px
+  @include flexC()
+  position: fixed
+  z-index: 100
+  ul 
+    width: 25%
+    height: 100%
+    @include flexC()
+    justify-content: space-around
+    li, a
+      color: #fff9
+      &:hover 
+        color: $corehover
+
+.ico 
+  display: none
+  position: absolute
+  width: 40px
+  height: 40px
+  background-position: center
+  background-repeat: no-repeat
+  position: absolute
+  right: 5vw
+  transition: .1s ease
+  
+.menuIco 
+  background-image: url("./img/menu.svg")
+
+.crossIco 
+  background-image: url("./img/cross.svg")
+
+.titleh4
+  font-size: 12vh 
+  position: relative
+  margin-top: 26vh
+  .s1,.s2,.s3
+    color: $corehover
+  .s4,.s5
+    color: #cc0000
+
+.homeContent1 
+  @include flexC()
+  justify-content: flex-start
+  flex-direction: column
+  height: 80vh
+  background-color: #01011d
+  background-image: url("./img/fon.svg")
+  position: relative
+  perspective: 500px
+  video 
+    position: absolute
+    min-width: 100%
+    min-height: 100%
+    width: auto
+    height: auto
+  #slider 
+    width: 70vw
+    height: 80vh
+    position: absolute
+    overflow: hidden
+    bottom: -52vh
+    background-color: $corecoolor
+    border-radius: 5px
+    transform: perspective(900px) rotate3d(0, 0, 300deg, 0deg)
+    .polosaSlide 
+      height: 100%
+      width: 210vw
+      display: flex
+      opacity: .85
+      position: relative
+      transition: 1.6s cubic-bezier(0.68, -0.55, 0.265, 1.05)
+      .slid 
+        height: 100%
+        width: 70vw
+        padding: 4vh
+        box-sizing: border-box
+        display: flex
+        .sliderList 
+          h5 
+            font-size: 10vh
+            transform: translateY(15vh)
+            position: relative
+            &:before 
+              content: ""
+              position: absolute
+              width: 10vw
+              height: 1px
+              background-color: #fff
+              border-radius: 1px
+              top: -30px
+        .sliderListRight 
+          display: flex
+          align-items: flex-end
+          justify-content: flex-end
+          .listBlock 
+            height: max-content
+            margin-bottom: 10vh 
+            h4 
+              color: $corehover
+            p 
+              margin: 5vh 0
+              margin-right: 30%
+              font-size: 2vh
+            span 
+              background-color: $corehover
+              padding: 8px 30px
+              border-radius: 50px
+              border: 1px solid $corehover
+              cursor: pointer
+              &:hover 
+                background-color: transparent
+                color: $corehover
+    .interfaceSlide
+      position: absolute 
+      bottom: 0
+      height: 50px
+      @include flexC()
+      .i
+        width: 8px 
+        height: 8px
+        border-radius: 10px
+        background: #fff6
+        display: block
+        margin: 0px 20px
+        cursor: pointer
+        &:hover 
+          transform: matrix(1.5, 0, 0, 1.5, 0, 0)
+
+.iwite
+  background-color: #fff !important
+  transform: matrix(1.5, 0, 0, 1.5, 0, 0)
+
+.homeContent2
+  padding-top: 65vh
+
+.homeContent3
+  padding-top: 25vh
+  padding-bottom: 30vh
+  .HCMDivText 
+   p 
+     display: none 
+
+.homeContent2, .homeContent3
+  background-color: #111025
+  @include flexC()
+  flex-direction: column
+  h6 
+    font-size: 4vh
+    font-family: Sacramento
+  .SectionHCMiniDiv 
+    display: flex
+    flex-wrap: wrap
+    margin-top: 100px
+    width: 60vw
+    div, img
+      border-radius: 3px
+    .HCMiniDiv
+      width: 48% 
+      display: flex
+      align-items: center
+      flex-direction: column
+      img 
+        width: 95%
+        height: auto
+      .HCMDivText 
+        width: 85%
+        transform: translateY(-5vh)
+        height: 30vh
+        @include flexC()
+        justify-content: space-evenly
+        flex-direction: column
+        box-sizing: border-box
+        padding: 30px 0
+        p 
+          font-size: 2vh
+          font-weight: 500
+          text-align: center
+          width: 40%
+        h4 
+          font-size: 3vh
+          font-weight: 600
+          text-align: center
+        .linkRead 
+          padding: 8px 22px
+          background-color: rgb(255, 0, 102)
+          border-radius: 50px
+          &:hover 
+            color: $corehover
+            background: transparent
+        .linkBasik 
+          display: block
+          width: 100px
+          height: 2px
+          background-color: #fff
+          position: relative
+          &:after 
+            content: ""
+            width: 15px
+            height: 15px
+            border-right: 2px solid
+            border-bottom: 2px solid
+            position: absolute
+            right: 0
+            top: -8px
+            transform: rotate(-45deg)
+      &:nth-child(2)
+        transform: translateY(15vh)
+
+footer 
+  background-color: #01011d
+  display: flex
+  height: 30vh
+  a 
+    margin: 0 5px
+  .footerDivLeft, .footerDivRight
+    height: 100%
+    width: 50%
+    display: flex
+    align-items: flex-end
+    div 
+      width: 60%
+      height: 80%
+      display: flex
+      justify-content: space-around
+      align-items: flex-start
+      flex-direction: column
+      opacity: .85
+      p 
+        width: 65%
+  .footerDivLeft 
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+
+
+header 
+  background-color: #070725
+  @include flexC()
+  .staticSlide 
+    @include flexC()
+    flex-direction: column
+    transform: translateY(15vh)
+    width: 65%
+    background-color: $corecoolor
+    margin-top: 10vh
+    padding: 4vh 12vw 12vh 12vw
+    box-sizing: border-box
+    .textBlock
+      h2 
+        font-weight: 400
+        font-size: 2vh
+        letter-spacing: 2px
+      p 
+        font-weight: 300
+        &:nth-child(2)
+          margin: 3vh 0px
+        &:nth-child(3)
+          margin-bottom: 5vh
+      .titleh4 
+        margin-top: 0
+        text-align: left
+        padding: 5vh 5vw 7vh 0
+        font-size: 8vh 
+    .buttonBlock 
+      span 
+        padding: 6px 12px
+        background-color: $corehover
+        border-radius: 50px
+        cursor: pointer 
+        transition: .1s ease
+        &:hover 
+          background-color: transparent 
+          color: $corehover
+  
+
+.imgAbout1 
+  min-width: 100vw
+  width: auto
+  height: 100vh
+  background-image: url("./img/img0.webp")
+  background-position: top
+  background-repeat: no-repeat
+  background-size: cover
+
+.ourTeam 
+  @include flexC()
+  flex-direction: column
+  background-color: #070725
+  .ourTeamText
+    width: 60%
+    padding: 10vh 12vw 4vh 12vw
+    box-sizing: border-box
+    @include flexC()
+    flex-direction: column
+    h4 
+      font-family: Sacramento
+      font-size: 4vh
+    p 
+      text-align: center
+      margin-top: 50px
+      font-weight: 300
+      opacity: .85 
+  .ourTeamImg 
+    width: 80%
+    height: 75vh
+    margin: 10vh
+    background-image: url("./img/fon0.1.webp")
+    background-position: top
+    background-repeat: no-repeat
+    background-size: 100% 100%
