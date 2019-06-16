@@ -2,7 +2,7 @@ import { GET_CORE, GET_PICHA } from "../hellpers/api";
 
 
 
-const statecontent = [];
+const statecontent = [456];
 
 export default function content (state = statecontent, action){
     switch(action.type){

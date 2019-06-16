@@ -21,7 +21,7 @@ class Nav extends Component {
     <ul className={this.state.classListMenu}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
-        <li>Shows</li>
+        <li><Link to="/shows">Shows</Link></li>
         <li>Gallery</li>
         <li>Classes</li>
         <li>Contact</li>

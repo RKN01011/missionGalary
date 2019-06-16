@@ -14,7 +14,7 @@
   100% 
     opacity: 1 
 
-.About, .index 
+.About, .index, .Shows
   animation: coolAni 2s ease 
 
 @mixin flexC 
@@ -22,13 +22,30 @@
   justify-content: center
   align-items: center
 
+@mixin back($link)
+  background-image: url($link)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
 $corecoolor: #01011d
 $corehover: #ff0066
+$prered: #ef2525
 
 #root 
   background-color: #01011d
     
 @media (max-width: 868px) 
+  .showBlock 
+    flex-wrap: wrap
+    .imgDiv 
+      width: 100% !important
+      height: 60vh !important
+    .showBlockText 
+      p 
+        width: 80% !important
+      a 
+        width: 25% !important
   .ourTeamImg 
     width: 95% !important
     height: 55vh !important
@@ -401,3 +418,108 @@ header
     background-position: top
     background-repeat: no-repeat
     background-size: 100% 100%
+
+.Shows 
+  .headerShow 
+    margin-top: 60px
+    @include flexC()
+    height: 60vh
+    div 
+      width: 50%
+      height: 60%
+      display: flex
+      justify-content: center
+      flex-direction: column
+      h4 
+        font-size: 7vh
+        margin-bottom: 3vh
+        span 
+          &:nth-child(1)
+            color: $corehover
+          &:nth-child(2)
+             color: $prered
+      p 
+        font-weight: 300
+        opacity: .95      
+  .showBlock 
+    display: flex
+    .imgDiv 
+      width: 70%
+      height: 55vh
+      img 
+        width: 100%
+        height: 100%
+    .showBlockText 
+      position: relative
+      height: 55vh
+      display: flex
+      flex-direction: column 
+      justify-content: space-evenly
+      box-sizing: border-box
+      padding: 3%
+      .buyMenu 
+        width: 0%
+        right: 0
+      h4 
+        font-size: 3vh
+      p 
+        width: 40%
+      span 
+        font-weight: 600 
+      .openMenu 
+        box-sizing: border-box
+        padding: 15px 25px 
+        background-color: #ffffff
+        width: 15%
+        @include flexC()
+        border-radius: 50px
+        cursor: pointer
+        &:hover 
+          transform: matrix(1.05, 0, 0, 1.05, 0, 0)
+
+.buyMenu 
+  position: absolute
+  height: 100%
+  z-index: 10
+  overflow: hidden
+  .headBuyMenu 
+    width: 100%
+    height: 15%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    span 
+      margin: 0 8vw
+    i 
+      display: block
+      height: 30%
+      width: 5%
+      margin-right: 10px
+      @include back("./img/cross.svg")
+      cursor: pointer
+  .menuCoreBlock
+    width: 100%
+    height: 70% 
+    @include flexC()
+    flex-direction: column
+    div 
+      width: 100%
+      height: 30%
+      display: flex
+      justify-content: space-around
+      align-items: center
+      .interfaceMenu
+        width: max-content
+        p 
+          margin: 0 15px
+        i 
+          font-size: 3vh
+          cursor: pointer 
+  .buttonMenuBlock 
+    background-color: red 
+    width: 100%
+    height: 15%
+
+
+.fullMenu 
+  width: 100% !important
