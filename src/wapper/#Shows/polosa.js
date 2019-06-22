@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { openMenu as open } from "../../motor";
 import { connect } from "react-redux";
 import Math from "./showsMaths";
+import { plusTotal } from "../../action/after.action";
 
 class addShows extends Component {
     constructor(props){
@@ -23,7 +24,7 @@ class addShows extends Component {
                     style={{backgroundColor: `${el.color}90`}} 
                     onClick={open}>
                         <h4>{el.h4}</h4>
-                        <p>I'm a paragraph. Click here to edit and add your own text.
+                        <p className="textP">I'm a paragraph. Click here to edit and add your own text.
                            Is easy! Just click on "Edit Text" or double-click on me and you
                            You can add your own content and switch fonts.</p>
                         <span>{el.data}</span>
@@ -35,22 +36,20 @@ class addShows extends Component {
                                 <i className="crossBuyMenu" data-chose={el.i} />
                             </div>
                             <div className="menuCoreBlock">
-                               <div>
+                               <div className="tablePrice">
                                    <span>Tickets</span>
                                    <span>Price</span>
                                    <span>Qty</span>
                                    <span>Total</span>
-                                </div>
-                               <div>
-                               <span>Student</span>
-                               <Math price={20} def={20}/>
-                                </div> 
-                               <div>
-                                <span>Regular</span>
-                                <Math price={25} def={20}/>
+                                   <span>Student</span>
+                                   <Math price={20} plusTotal={this.props.plusTotal} def={this.props.content[1]}/>
+                                   <span>Regular</span>
+                                   <Math price={25} plusTotal={this.props.plusTotal} def={this.props.content[1]}/>
                                 </div>  
                             </div>
-                            <div className="buttonMenuBlock"></div> 
+                            <div className="buttonMenuBlock">
+                            {this.props.content[0]}
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -67,5 +66,13 @@ export default connect(
         return {
         content: storeContent.content,
         }
-    } 
+    },
+    (dispatch)=>{
+        return{
+          async plusTotal(n, def, type){
+            const action = await plusTotal(n, def, type);
+            dispatch(action);
+          },     
+        }
+    }
 ) (addShows);
