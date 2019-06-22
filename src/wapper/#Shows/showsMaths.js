@@ -5,17 +5,19 @@ class mathShows extends Component {
         super(props);
         this.state = {
             price: this.props.price || 20,
-            def: this.props.def || 20,
             qty: 0,
             total: 0
         }
     }
     change = (e) => {
         let set = this.state;
-        if(e.target.className == "neg" && (set.def >= 1 && set.def <= 20))
-        this.setState({def: set.def + 1, qty: set.qty - 1, total: set.total - set.price })
-        else if(e.target.className == "plus" && (set.def >= 1 && set.def <= 20))
-        this.setState({def: set.def - 1, qty: set.qty + 1, total: set.total + set.price })
+        console.log(this.props.def)
+        if(e.target.className == "neg" && (this.props.def >= 0 && this.props.def <= 20)){
+        this.props.plusTotal(set.price, 1, "neg");
+        this.setState({qty: set.qty - 1, total: set.total - set.price })}
+        else if(e.target.className == "plus" && (this.props.def >= 0 && this.props.def <= 20)){
+        this.props.plusTotal(set.price, 1, "plus");
+        this.setState({qty: set.qty + 1, total: set.total + set.price })}
         else 
         return
     }

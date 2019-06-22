@@ -1,12 +1,19 @@
 
-import { GET_AFTER } from "../hellpers/api";
+import { PLUS, NEG } from "../hellpers/api";
 
 
-export async function getAfter (name) {
-    const base = name ;
-    return{
-        type: GET_AFTER,
-        payload: base
-    };
+export async function plusTotal(n, def, type) {
+    switch(type){
+        case "plus":
+            return{
+                type: PLUS,
+                payload: [n, def]
+            };
+            case "neg":
+            return{
+                type: NEG,
+                payload: [n, def]
+            };
+    }
 };
 
