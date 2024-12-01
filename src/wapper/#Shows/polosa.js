@@ -21,7 +21,7 @@ class addShows extends Component {
                     <div className="imgDiv"><img src={el.img} alt="" /></div> 
                     <div 
                     className="showBlockText" 
-                    style={{backgroundColor: `${el.color}90`}} 
+                    style={{backgroundColor: `${el.color}900`}} 
                     onClick={open}>
                         <h4>{el.h4}</h4>
                         <p className="textP">I'm a paragraph. Click here to edit and add your own text.
